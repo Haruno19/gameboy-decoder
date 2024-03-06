@@ -1,17 +1,16 @@
 # gameboy-decoder
-little project I developed for fun and learning purposes.
 
 
-## functioning
-given a <code>rom.gb</code> file, <code>romdecoder</code> prints out all the information included in the rom header, and produces a <code>rom.asm</code> file contining the bytes from <code>0x0150</code> to <code>EOF</code> reversed parsed (disassembled?) into Z80 ASM instructions.
+## how it works
+given a <code>rom.gb</code> file, <code>romdecoder</code> prints out all the information included in the rom header, and produces a <code>rom.asm</code> file containing the bytes from addr <code>0x0150</code> to <code>EOF</code> reverse-parsed (_disassembled_) into Z80 ASM instructions.
 
-## files
+## src files
 - <code>romdecoder.cpp</code>  
-the main source file, it decodes the rom header and launches the bytes to Z80-ASM instructions decoder.
+the main source file, it decodes the rom header and calls the bytes to Z80-ASM instructions decoder.
 - <code>licensecodes.h</code>  
-contains functions to translate bytes to rom license codes.
+contains the functions to translate bytes into rom license codes.
 - <code>z80asm.h</code>  
-contains all the function to parse bytes into Z80-ASM instructions.
+contains all the functions to parse bytes into Z80-ASM instructions.
 
 ## environment
 compiled and tested with <code>Microsoft cl version 19.34.31937 for x64</code>  
